@@ -2,7 +2,7 @@
   "name": "pcr",
   "version": "0.1.0",
   "description": "A wrapper for the Penn Course Review API",
-  "main": "lib/index.js",
+  "main": "lib/pcr.js",
   "dependencies": {
     "request": "^2.47.0"
   },
