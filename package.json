@@ -1,0 +1,34 @@
+{
+  "name": "pcr",
+  "version": "0.1.0",
+  "description": "A wrapper for the Penn Course Review API",
+  "main": "lib/index.js",
+  "dependencies": {
+    "request": "^2.47.0"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "make test",
+    "prepublish": "make js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pennlabs/pcr-sdk-node.git"
+  },
+  "keywords": [
+    "penn",
+    "upenn",
+    "university",
+    "open data",
+    "pcr"
+  ],
+  "author": "Adel Qalieh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pennlabs/pcr-sdk-node/issues"
+  },
+  "homepage": "https://github.com/pennlabs/pcr-sdk-node"
+}
