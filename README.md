@@ -39,7 +39,7 @@ We'd love to accept pull requests! Also, file bugs or ask questions in GitHub is
 
 ### Building
 
-The SDK is written in [CoffeeScript](http://coffeescript.org/), so please make your changes in the CoffeeScript source files in `src` and they can be compiled into JavaScript using `make js`.
+The SDK is written in [ES6](http://es6-features.org/), so please make your changes in the JS source files in `src` and they can be compiled into ES5 JavaScript using `make js`.
 
 ### Testing
 
