@@ -7,7 +7,9 @@
     "request": "^2.47.0"
   },
   "devDependencies": {
-    "coffee-script": "^1.8.0",
+    "babel": "^6.1.18",
+    "babel-core": "^6.1.21",
+    "babel-preset-es2015": "^6.1.18",
     "mocha": "^2.0.1"
   },
   "scripts": {
@@ -30,5 +32,10 @@
   "bugs": {
     "url": "https://github.com/pennlabs/pcr-sdk-node/issues"
   },
-  "homepage": "https://github.com/pennlabs/pcr-sdk-node"
+  "homepage": "https://github.com/pennlabs/pcr-sdk-node",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
 }

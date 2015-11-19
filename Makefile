@@ -1,12 +1,12 @@
 js:
-	coffee --compile --output lib/ src/
+	babel src/ --out-dir lib/
 
 .PHONY: test
 test: js
-	mocha --compilers coffee:coffee-script/register -t 10s
+	mocha --compilers js:babel-core/register -t 10s
 
 all: js
 
 watch:
 	coffee --watch --output lib/ src/ &
-	mocha --compilers coffee:coffee-script/register -t 10s -w -R min
+	mocha --compilers js:babel-core/register -t 10s -w -R min
