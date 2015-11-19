@@ -1,4 +1,6 @@
-request = require('request');
+var request = require('request');
+
+const API_HOST = 'http://api.penncoursereview.com/v1/';
 
 class PCR {
   constructor (token) {
@@ -21,14 +23,15 @@ class PCR {
       method: "GET",
       qs: params,
     }, (err, body, response) => {
-      json = JSON.parse(response);
-      if (err) {
-        throw err;
-      }
-      cb(json);
+      var json = JSON.parse(response);
+      cb(err, json);
     });
     return;
   }
+
+  course (id_or_url, cb) {
+    this.api(`courses/${id_or_url}`, cb);
+  }
 }
 
-PCR.API_HOST = 'http://api.penncoursereview.com/v1/';
+module.exports = PCR;

@@ -8,5 +8,5 @@ test: js
 all: js
 
 watch:
-	coffee --watch --output lib/ src/ &
+	babel --watch src/ --out-dir lib/ &
 	mocha --compilers js:babel-core/register -t 10s -w -R min
