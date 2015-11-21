@@ -32,6 +32,22 @@ class PCR {
   course (id_or_url, cb) {
     this.api(`courses/${id_or_url}`, cb);
   }
+
+  departments (cb) {
+    this.api('depts', cb);
+  }
+
+  instructor (id, cb) {
+    this.api(`instructors/${id}`, cb);
+  }
+
+  instructors (cb) {
+    this.api('instructors', cb);
+  }
+
+  semesters (cb) {
+    this.api('semesters', cb);
+  }
 }
 
 module.exports = PCR;
