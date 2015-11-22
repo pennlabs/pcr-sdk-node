@@ -33,6 +33,10 @@ class PCR {
     this.api(`courses/${id_or_url}`, cb);
   }
 
+  department (department_id, cb) {
+    this.api(`depts/${department_id}`, cb);
+  }
+
   departments (cb) {
     this.api('depts', cb);
   }
@@ -47,6 +51,18 @@ class PCR {
 
   semesters (cb) {
     this.api('semesters', cb);
+  }
+
+  section (course_id, section_id, cb) {
+    this.api(`courses/${course_id}/sections/${section_id}`, cb);
+  }
+
+  review (course_id, section_id, instructor_id, cb) {
+    this.api(`courses/${course_id}/sections/${section_id}/reviews/${instructor_id}`, cb);
+  }
+
+  courseHistory (courseHistory_id, cb) {
+    this.api(`coursehistories/${courseHistory_id}`, cb);
   }
 }
 

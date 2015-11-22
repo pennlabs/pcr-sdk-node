@@ -7,6 +7,8 @@ test: js
 
 all: js
 
-watch:
-	babel --watch src/ --out-dir lib/ &
+watchjs:
+	babel --watch src/ --out-dir lib/
+
+watchtest:
 	mocha --compilers js:babel-core/register -t 10s -w -R min
