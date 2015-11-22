@@ -64,6 +64,10 @@ class PCR {
   courseHistory (courseHistory_id, cb) {
     this.api(`coursehistories/${courseHistory_id}`, cb);
   }
+
+  courseHistoryReviews (courseHistory_id, cb) {
+    this.api(`coursehistories/${courseHistory_id}/reviews`, cb);
+  }
 }
 
 module.exports = PCR;
