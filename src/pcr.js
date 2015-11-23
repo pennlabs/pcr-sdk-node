@@ -68,6 +68,17 @@ class PCR {
   courseHistoryReviews (courseHistory_id, cb) {
     this.api(`coursehistories/${courseHistory_id}/reviews`, cb);
   }
+
+  averageReview (course_id, cb) {
+    request({
+      url: `http://api.pennlabs.org/pcr/${course_id}`,
+      method: "GET",
+    }, (err, body, response) => {
+      var json = JSON.parse(response);
+      cb(err, json);
+    });
+    return;
+  }
 }
 
 module.exports = PCR;

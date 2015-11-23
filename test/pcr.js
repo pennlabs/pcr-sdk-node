@@ -27,14 +27,14 @@ describe('PCR', () => {
     });
   });
 
-  it('should find all departments', () => {
+  it('should get all departments', () => {
     pcr.departments((err, json) => {
       assert(json.result.values.length > 20);
       assert.equal(json.result.values[0].id, 'AAMW');
     });
   });
 
-  it('should find all instructors', () => {
+  it('should get all instructors', () => {
     pcr.instructors((err, json) => {
       assert(json.result.values.length > 20);
       assert.equal(json.result.values[0].id, '1-JACK-TOPIOL');
@@ -61,7 +61,7 @@ describe('PCR', () => {
     });
   });
 
-  it('should find all semesters', () => {
+  it('should get all semesters', () => {
     pcr.semesters((err, json) => {
       assert(json.result.values.length > 10);
       assert.equal(json.result.values[0].id, '2002A');
@@ -89,6 +89,12 @@ describe('PCR', () => {
   it ('should find coursehistory based on alias', () => {
     pcr.courseHistory('ASTR-150', (err, json) => {
       assert.equal(json.result.aliases[0], 'ASTR-150');
+    });
+  });
+
+  it ('should get the average review of a course', () => {
+    pcr.averageReview('ASTR-150', (err, json) => {
+      assert(json.rInstructorAccess > 3.5);
     });
   });
 });
