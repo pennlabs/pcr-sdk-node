@@ -15,8 +15,10 @@ npm install pcr
 var PCR = require("pcr")
 
 pcr = new PCR("API_TOKEN")
-pcr.department("CHEM", function(result) {
-  console.log(result)
+pcr.department("CHEM", function(err, result) {
+  if (!err) {
+    console.log(result)
+  }
 })
 ```
 
@@ -48,7 +50,7 @@ If you prefer to have these tests run while you're editing automatically, you ca
 
 ### TODO
 
-- [ ] Penn Course Review API
+- [X] Penn Course Review API
 - [ ] Documentation
 
 ## Authors
