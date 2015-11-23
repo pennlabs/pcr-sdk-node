@@ -1,5 +1,7 @@
 # PCR Node SDK
 
+[![Build Status](https://travis-ci.org/pennlabs/pcr-sdk-node.svg)](https://travis-ci.org/pennlabs/pcr-sdk-node)
+
 A Node.js wrapper for the Penn Course Review API.
 
 ## Install
