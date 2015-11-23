@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "make test",
-    "prepublish": "make js"
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",
