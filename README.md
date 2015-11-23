@@ -48,7 +48,7 @@ The SDK is written in [ES6](http://es6-features.org/), so please make your chang
 ### Testing
 
 You can test the work you have using `make test`, which uses [Mocha](http://mochajs.org/) to run the tests inside of the `test` directory. You should have environment variables in your shell that specify your API keys in the format `PCR_API_TOKEN`.
-If you prefer to have these tests run while you're editing automatically, you can run `make watch` from your terminal.
+If you prefer to have these tests run while you're editing automatically, you can run `make watchtest` from your terminal.
 
 ### TODO
 
