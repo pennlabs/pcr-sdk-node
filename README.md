@@ -14,10 +14,10 @@ npm install pcr
 ## Overview
 
 ```javascript
-var PCR = require("pcr")
+var PCR = require('pcr')
 
-pcr = new PCR("API_TOKEN")
-pcr.department("CHEM", function(err, result) {
+pcr = new PCR('API_TOKEN')
+pcr.department('CHEM', function(err, result) {
   if (!err) {
     console.log(result)
   }
