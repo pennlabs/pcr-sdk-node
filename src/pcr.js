@@ -33,8 +33,8 @@ class PCR {
     this.api(`courses/${id_or_url}`, cb);
   }
 
-  department (department_id, cb) {
-    this.api(`depts/${department_id}`, cb);
+  department (departmentId, cb) {
+    this.api(`depts/${departmentId}`, cb);
   }
 
   departments (cb) {
@@ -53,25 +53,25 @@ class PCR {
     this.api('semesters', cb);
   }
 
-  section (course_id, section_id, cb) {
-    this.api(`courses/${course_id}/sections/${section_id}`, cb);
+  section (courseId, sectionId, cb) {
+    this.api(`courses/${courseId}/sections/${sectionId}`, cb);
   }
 
-  review (course_id, section_id, instructor_id, cb) {
-    this.api(`courses/${course_id}/sections/${section_id}/reviews/${instructor_id}`, cb);
+  review (courseId, sectionId, instructorId, cb) {
+    this.api(`courses/${courseId}/sections/${sectionId}/reviews/${instructorId}`, cb);
   }
 
-  courseHistory (courseHistory_id, cb) {
-    this.api(`coursehistories/${courseHistory_id}`, cb);
+  courseHistory (courseHistoryId, cb) {
+    this.api(`coursehistories/${courseHistoryId}`, cb);
   }
 
-  courseHistoryReviews (courseHistory_id, cb) {
-    this.api(`coursehistories/${courseHistory_id}/reviews`, cb);
+  courseHistoryReviews (courseHistoryId, cb) {
+    this.api(`coursehistories/${courseHistoryId}/reviews`, cb);
   }
 
-  averageReview (course_id, cb) {
+  averageReview (courseId, cb) {
     request({
-      url: `http://api.pennlabs.org/pcr/${course_id}`,
+      url: `http://api.pennlabs.org/pcr/${courseId}`,
       method: 'GET',
     }, (err, body, response) => {
       var json = JSON.parse(response);
