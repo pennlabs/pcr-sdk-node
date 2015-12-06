@@ -20,7 +20,7 @@ class PCR {
 
     request({
       url: `${API_HOST}${endpoint}`,
-      method: "GET",
+      method: 'GET',
       qs: params,
     }, (err, body, response) => {
       var json = JSON.parse(response);
@@ -72,7 +72,7 @@ class PCR {
   averageReview (course_id, cb) {
     request({
       url: `http://api.pennlabs.org/pcr/${course_id}`,
-      method: "GET",
+      method: 'GET',
     }, (err, body, response) => {
       var json = JSON.parse(response);
       cb(err, json);
